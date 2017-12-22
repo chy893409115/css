@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+	<style>
+		#banner span{
+			color:red;
+		}
+
+		#banner>span{
+			font-size:24px;
+		}
+  /*子代选择器*/
+		.top>span{
+			font-size:48px;
+		}
+
+		#banner>.top>span{
+			font-size:96px;
+		}
+
+
+
+		#uname{
+			color:gray;
+			font-style:italic;/*斜体显示 等同于 <i>*/
+		}
+		/*#uname 被激活时，改成 非斜体*/
+		#uname:active{
+			font-style:normal;
+		}
+		/*#uname 获取焦点时，文本为绿色*/
+		#uname:focus{
+			color:green;
+		}
+
+		#anchor{
+			color:black;
+			text-decoration:none;
+		}
+		#anchor:hover{
+			color:red;
+			/*text-decoration:underline;*/
+		}
+	</style>
+ </head>
+ <body>
+	<!-- a : hover -->
+	<a id="anchor" href="http://www.oschina.net">OSCHINA</a>
+
+	<p>
+		<input type="text" id="uname" value="请输入用户名">
+	</p>
+
+	<a href="http://www.csdn.net" target="_blank">我要去CSDN</a>
+	<!-- 
+		1、设置 id 为 banner 中所有的 span元素的 文本颜色 为 红色
+
+		2、设置 "ID 为 banner 中的 span 元素" 文字大小为 24px
+		3、设置 "ID 为 banner 中 class 为 top 中的 span元素" 文字大小为 96px
+	-->
+  <div id="banner">
+		<span>ID 为 banner 中的 span 元素</span>	
+		<p class="top">
+			<span>ID 为 banner 中 class 为 top 中的 span元素</span>
+		</p>
+	</div>
+
+	<p class="top">
+		<span>不想被任何样式所影响的span元素</span>
+	</p>
+ </body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>选择器Demo</title>
+	<style>
+		/*1、
+		 *	类选择器 ：redColor
+		 *  文本颜色 为 红色
+		 */
+		.redColor{
+			color:red;
+		}
+
+		/**
+		 * 2、类选择器 ：bigSize
+		 * 文字大小 为 24px
+		 */
+		.bigSize{
+			font-size:24px;
+		}
+
+		/**
+		 * 3、分类选择器 ：span.redColor
+		 * 背景颜色 ：yellow
+		 */
+		 span.redColor{
+			background-color:yellow;
+		 }
+
+		 /**
+		  * 将 id为container的元素，class为 redColor，class为 important 的 div元素，文本颜色 设置为 橘子色
+			*/
+		#container,.redColor,div.important{
+			color:orange;
+		}
+	</style>
+ </head>
+ <body>
+	<div id="container"> ID 为container 的元素</div>
+  <div class="redColor">锄禾日当午</div>
+	<p class="redColor bigSize">汗滴禾下土</p>
+	<span class="redColor bigSize">谁知盘中餐</span>
+	<span class="bigSize">粒粒皆辛苦</span>
+ </body>
+</html>

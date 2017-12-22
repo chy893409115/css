@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>选择器优先级</title>
+	<style>
+		#msg{color:red;}/*100*/
+		#top span{color:pink;}/*100+1=101*/
+		#container span{color:orange;}/*100+1=101*/
+		#container #msg{color:blue;}/*100 + 100 = 200*/
+		#container .important span{color:purple;}/*100 + 10 + 1 = 111*/
+
+
+
+
+		#banner{color:green;}
+		span{color:yellow;}
+		a:hover:focus{ color:orange; }
+		a.anchor{color:red;}
+		input:focus{
+		 color:red;
+		
+		}
+	</style>
+ </head>
+ <body>
+	<a class="anchor" href="http://www.codeboy.com">
+		学子商城
+	</a>
+ <!-- span 的自定义样式 会优先于 继承的样式被使用 -->
+	<div id="banner">
+		<span>这是 banner 中的 span</span>
+	</div>
+
+	<!-- 选择器优先级 -->
+	 <input type="text">
+  <div id="container">
+		<p id="top" class="important">
+			<span id="msg" style="color:brown;">
+				这是 div 中的 p 中的 span
+			</span>
+		</p>
+	</div>
+ </body>
+</html>
